@@ -4,6 +4,7 @@ const db = require('./db');
 const schoolRoutes = require('./routes/schoolroute');
 
 const app = express();
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use('/', schoolRoutes);
 
